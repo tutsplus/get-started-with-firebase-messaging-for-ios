@@ -27,6 +27,7 @@
 		C44CCA5F218155B700EF0F58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C44CCA61218155B700EF0F58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C44CCA672181566300EF0F58 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C44CCA69218165D900EF0F58 /* Firebase-FCM.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Firebase-FCM.entitlements"; sourceTree = "<group>"; };
 		E33129E7DD91E889796C8EA3 /* Pods-Firebase-FCM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firebase-FCM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Firebase-FCM/Pods-Firebase-FCM.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +73,7 @@
 		C44CCA54218155B500EF0F58 /* Firebase-FCM */ = {
 			isa = PBXGroup;
 			children = (
+				C44CCA69218165D900EF0F58 /* Firebase-FCM.entitlements */,
 				C44CCA55218155B500EF0F58 /* AppDelegate.swift */,
 				C44CCA57218155B500EF0F58 /* ViewController.swift */,
 				C44CCA59218155B500EF0F58 /* Main.storyboard */,
@@ -125,6 +127,11 @@
 				TargetAttributes = {
 					C44CCA51218155B500EF0F58 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -356,6 +363,7 @@
 			baseConfigurationReference = E33129E7DD91E889796C8EA3 /* Pods-Firebase-FCM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Firebase-FCM/Firebase-FCM.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UU98N6FWB5;
 				INFOPLIST_FILE = "Firebase-FCM/Info.plist";
@@ -375,6 +383,7 @@
 			baseConfigurationReference = 84853901B4437BA9F6D5CAC4 /* Pods-Firebase-FCM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Firebase-FCM/Firebase-FCM.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UU98N6FWB5;
 				INFOPLIST_FILE = "Firebase-FCM/Info.plist";
